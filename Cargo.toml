@@ -2,7 +2,7 @@
 name = "wasm-example"
 description="wasm example with easy access"
 repository = "https://github.com/marpme/wasm-example"
-license = "MIT"
+license = "Apache-2.0"
 version = "0.1.0"
 authors = ["marpme <7430964+marpme@users.noreply.github.com>"]
 edition = "2018"

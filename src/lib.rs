@@ -5,11 +5,6 @@ use wasm_bindgen::prelude::*;
 use web_sys::{window, console};
 
 #[wasm_bindgen]
-extern "C" {
-    fn alert(s: &str);
-}
-
-#[wasm_bindgen]
 pub fn greet() {
     console::log_1(&JsValue::from("Hello World!"))
 }

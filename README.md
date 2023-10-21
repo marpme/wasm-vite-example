@@ -1,84 +1,74 @@
-<div align="center">
+# Web App with WebAssembly and Vite Example
 
-  <h1><code>wasm-pack-template</code></h1>
+This repository provides an example project for building web applications using WebAssembly (Wasm) and Vite, a fast and flexible build tool. If you want to harness the power of WebAssembly and streamline your development process with Vite, this project can serve as a great starting point.
 
-  <strong>A template for kick starting a Rust and WebAssembly project using <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
+## Overview
 
-  <p>
-    <a href="https://travis-ci.org/rustwasm/wasm-pack-template"><img src="https://img.shields.io/travis/rustwasm/wasm-pack-template.svg?style=flat-square" alt="Build Status" /></a>
-  </p>
+WebAssembly is a binary instruction format that enables high-performance execution of code on web browsers. It allows you to write code in languages like C, C++, Rust, and others, and then compile it into Wasm, which can be executed directly in web browsers. This project demonstrates how to integrate Wasm into a web application built with Vite.
 
-  <h3>
-    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutorial</a>
-    <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
-  </h3>
+## Features
 
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
-</div>
+- **Vite:** Vite is used as the build tool for this project, providing fast development and optimized production builds. It offers features like hot module replacement, fast development server, and tree-shaking for efficient bundling.
 
-## About
+- **WebAssembly:** This project includes a simple example of using WebAssembly to perform computations in a more efficient way compared to pure JavaScript.
 
-[**📚 Read this template tutorial! 📚**][template-docs]
+## Getting Started
 
-This template is designed for compiling Rust libraries into WebAssembly and
-publishing the resulting package to NPM.
+Follow these steps to get the project up and running on your local machine:
 
-Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
-templates and usages of `wasm-pack`.
+1. **Clone the repository:**
 
-[tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
-[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html
+   ```
+   git clone https://github.com/marpme/wasm-vite-example.git
+   cd wasm-vite-example
+   ```
 
-## 🚴 Usage
+2. **Install dependencies:**
 
-### 🐑 Use `cargo generate` to Clone this Template
+   ```
+   pnpm install
+   ```
 
-[Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
+3. **Build the project:**
 
-```
-cargo generate --git https://github.com/rustwasm/wasm-pack-template.git --name my-project
-cd my-project
-```
+   To build the project for development:
 
-### 🛠️ Build with `wasm-pack build`
+   ```
+   pnpm run dev
+   ```
 
-```
-wasm-pack build
-```
+   To build the project for production:
 
-### 🔬 Test in Headless Browsers with `wasm-pack test`
+   ```
+   pnpm run build
+   ```
 
-```
-wasm-pack test --headless --firefox
-```
+4. **Open the web app:**
 
-### 🎁 Publish to NPM with `wasm-pack publish`
+   Once the build is complete, you can open the web app in your browser at `http://localhost:5174/`.
 
-```
-wasm-pack publish
-```
+## Project Structure
 
-## 🔋 Batteries Included
+The project has the following structure:
 
-* [`wasm-bindgen`](https://github.com/rustwasm/wasm-bindgen) for communicating
-  between WebAssembly and JavaScript.
-* [`console_error_panic_hook`](https://github.com/rustwasm/console_error_panic_hook)
-  for logging panic messages to the developer console.
-* `LICENSE-APACHE` and `LICENSE-MIT`: most Rust projects are licensed this way, so these are included for you
+- `app/`: Contains the source code for the web application.
+  - `index.ts`: The entry point of the application.
+  - `index.html`: the HTML entry point for dev & build mode
+- `src/`: Contains the WebAssembly source code and files.
+- `vite.config.js`: The Vite configuration file.
+- `tsconfig.json`: The TSC configuration file.
+
+## Contributing
+
+We welcome contributions from the community! If you'd like to make this example even better or fix any issues, please feel free to open an issue or create a pull request.
 
 ## License
 
-Licensed under either of
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
-* Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-* MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+## Acknowledgments
 
-at your option.
+- Special thanks to the Vite community for their fantastic tools and resources.
+- Thanks to the WebAssembly community for enabling high-performance computing in web browsers.
 
-### Contribution
-
-Unless you explicitly state otherwise, any contribution intentionally
-submitted for inclusion in the work by you, as defined in the Apache-2.0
-license, shall be dual licensed as above, without any additional terms or
-conditions.
+Enjoy building web applications with WebAssembly and Vite! If you have any questions or run into issues, don't hesitate to ask for help in the [GitHub issues](https://github.com/marpme/wasm-vite-example/issues).

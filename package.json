@@ -1,10 +1,9 @@
 {
   "name": "@marpme/wasm-example",
-  "private": true,
   "version": "0.1.0",
-  "main": "index.ts",
+  "main": "./app/index.ts",
   "author": "marpme <7430964+marpme@users.noreply.github.com>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "wasm-pack build && vite build",
     "dev": "vite",
